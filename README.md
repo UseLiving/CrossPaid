@@ -1,23 +1,22 @@
-# CrossPaid
+# ProjectShift
 
-Plan where each fee goes before you move any money.
+A crypto chart playground with a monitor that has feelings.
 
-A single-page planning sandbox (no build step) for splitting creator fees between wallets. HTML, CSS and JavaScript all live in `index.html`.
+A single-page site (no build step): HTML, CSS and JavaScript all live in `index.html`.
 
 ## Run locally
 Open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000
 
 ## What's in it
-- A planner: up to five named routes, each with a share, a wallet address check and duplicate detection
-- A route map with glowing pulses, plus per-route amounts for a sample number of fees
-- Copy draft plan (only when shares total exactly 100% and addresses are valid)
-- A checklist for before anything goes live, a short "how it works" and a questions section
-- Connect Wallet (Phantom, Solflare, Backpack): reads the public address only, so it can be reused in a route. It cannot sign or send anything.
-- Light and dark mode, and a reduced-motion fallback
+- **The Shift Tape:** a simulated crypto chart (candles, line, area, MA 20, volume) that shifts between calm, pump, dump and rug. Includes a mood meter, a "make a call" game and a paper wallet with pretend money.
+- **The monitor:** eyes follow your cursor, he gets nervous when you come close, angrier the more you poke him, and at maximum rage he explodes, rebuilds as a robot, punches the headline letters and splits the screen.
+- **Shift Arena:** a blob-eating game under the monitor with bots. Live multiplayer needs the Claude-hosted page, which provides the shared room. Elsewhere it runs solo against bots.
+- **Doodle pen, sticker book (16 stickers) and a ticker tape** driven by the chart. Progress is saved in the browser.
+- Dark mode, reduced-motion support and a phone layout.
 
 ## Notes
-CrossPaid is a planner. It never signs or sends anything, has no token, and is not affiliated with any launch platform. It is not financial or tax advice. A real fee split has to be created in the platform's own official tool.
+Everything is a simulation. Prices are random numbers generated in your browser, nothing is a trade, there is no token, and it is not financial advice. The page loads Geist, Geist Mono and Caveat from Google Fonts and falls back to system fonts if they cannot load.
 
 ## Structure
-- `index.html`: the whole site (loads Geist and Geist Mono from Google Fonts, with system fallbacks)
-- `assets/`: icon, mark, profile pictures and X banner
+- `index.html`: the whole site
+- `assets/`: icon, profile pictures and the monitor character
